@@ -36,15 +36,28 @@ make run
 **Réccupération de l'URL de votre application Flask**. Votre application Flask est déployée dans votre Codespace. Pour obtenir votre URL cliquez sur l'onglet **[PORTS]** dans votre Codespace (à coté de Terminal) et rendez public votre port 500 (Visibilité du port). Ouvrez l'URL dans votre navigateur et c'est terminé, votre application est en ligne !  
   
 ---------------------------------------------------
-Séquence 3 : Modifier son code
+Séquence 3 : Modifier son code dans Github
 ---------------------------------------------------
 Objectif : Apporter des modifications à son code et le mettre en ligne
 Difficulté : Facile (~15 minutes)
 ---------------------------------------------------  
 Dans cette séquence, vous allez modifier le code du fichier hello.html dans Github, mettre à jour votre Codespace et observer le résultat en ligne sur votre site Web.  
 
+**Etape 1 :** Dans Github, **modifier la ligne 6 du fichier hello.html** pour y ajouter votre nom et prénom. **Commitez** (bouton vert) pour enregistrer vos modifications dans Github.  
 
-Vous allez dans cette séquence installer un serveur Flask dans votre Codespace. Depuis le terminal de votre Codespace copier/coller les codes ci-dessous étape par étape :
+**Etape 2 :** Dans Codespace, **stoppez votre serveur** depuis votre terminal via la **combinaison de touches Ctrl+c**.
+   
+**Etape 3 :** Toujours depuis Codespace, **mettre à jour votre code** en executant la commande suivante :
+```
+git pull
+```
+
+**Etape 4 :** Relancer votre serveur Flask et observez le résultat sur votre site Web.
+```
+make run
+```
+
+Vous avez dans cette séquence mis à jour du code dans Github, puis dans Codespace pour enfin observer le résultat en ligne.
 
 
 
