@@ -30,6 +30,25 @@ def api_paris():
 
     return jsonify(result)
 
+
+@app.get("/lyon")
+def api_lyon():
+    
+    url = "https://api.open-meteo.com/v1/forecast?latitude=45.7485&longitude=4.8467&hourly=temperature_2m,rain&models=meteofrance_seamless"
+    response = requests.get(url)
+    data = response.json()
+
+    times = data.get("hourly", {}).get("time", [])
+    temps = data.get("hourly", {}).get("temperature_2m", [])
+
+    n = min(len(times), len(temps))
+    result = [
+        {"datetime": times[i], "temperature_c": temps[i]}
+        for i in range(n)
+    ]
+
+    return jsonify(result)
+
 @app.route("/rapport")
 def mongraphique():
     return render_template("graphique.html")
