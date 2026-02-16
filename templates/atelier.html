@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <h1>Températures horaires — Paris</h1>
+  <h1>Températures horaires — Lyon</h1>
   <div id="chart"></div>
   <div id="status"></div>
 
@@ -41,7 +41,7 @@
     }
 
     async function fetchParisData() {
-      const res = await fetch('/paris', { headers: { 'Accept': 'application/json' } });
+      const res = await fetch('/lyon', { headers: { 'Accept': 'application/json' } });
 
       if (!res.ok) {
         throw new Error(`HTTP ${res.status} sur /paris`);
@@ -79,7 +79,7 @@
       data.addRows(rows);
 
       const options = {
-        title: 'Température à Paris (horaire)',
+        title: 'Température à Lyon (horaire)',
         legend: { position: 'bottom' },
         hAxis: {
           title: 'Date/Heure',
