@@ -40,11 +40,11 @@
       }
     }
 
-    async function fetchParisData() {
+    async function fetchLyonData() {
       const res = await fetch('/lyon', { headers: { 'Accept': 'application/json' } });
 
       if (!res.ok) {
-        throw new Error(`HTTP ${res.status} sur /paris`);
+        throw new Error(`HTTP ${res.status} sur /lyon`);
       }
 
       const json = await res.json();
